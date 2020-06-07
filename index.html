@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <style>
+    body {{margin:10px 20px;}}
+    h1 {{color:lightgray;font-size:36pt;}}
+    p {{font-size:16pt;}}
+    </style>
+</head>
+<body>
+    <h1>{title}</h1>
+    <p>{message}</p>
+    <div>
+        <form method="post" action="/">
+            <input type="hidden" name="last" value="{last}">
+            <input type="hidden" name="animal" value="{animal}">
+            <div>
+                <input type="radio" id="r1" name="answer" value="{yes}"checked>
+                <label for="r1">はい</label>
+            </div>
+            <div>
+                <input type="radio" id="r2" name="answer" value="{no}">
+                <label for="r2">いいえ</label>
+            </div>
+            <input type="submit">
+        </form>
+    </div>
+
+</body>
+</html>

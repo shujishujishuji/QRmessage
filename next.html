@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>next</title>
+    <style>
+    body {{margin:10px;}}
+    h1 {{text-align:right;}}
+    p {{font-size:14pt;}}
+    pre {{background-color:aliceblue;}}
+    </style>
+</head>
+<body>
+    <h1>{title}</h1>
+    <p>{message}</p>
+    <div>
+        <form method="post" action="/end">
+            <input type="hidden" name="last" value="{last}">
+            <input type="hidden" name="animal" value="{animal}">
+            <div>
+                <p>動物の名前</P>
+                <input type="text" name="animalname">
+            </div>
+            <div>
+                <p>その動物が正解になる質問：</P>
+                <input type="text" name="question" size="60">
+            </div>
+            <input type="submit">
+        </form>
+    </div>
+</body>
+</html>
