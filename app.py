@@ -76,7 +76,6 @@ class HelloServerHandler(BaseHTTPRequestHandler):
             fp=self.rfile,
             headers=self.headers,
             environ={'REQUEST_METHOD': 'POST'})
-
         try:
             answer = int(form['answer'].value)
             if (answer == -1):
@@ -113,10 +112,10 @@ class HelloServerHandler(BaseHTTPRequestHandler):
                 no=-2
             )
 
-            self.send_response(200)
-            self.end_headers()
-            self.wfile.write(html.encode('utf-8'))
-            return
+        self.send_response(200)
+        self.end_headers()
+        self.wfile.write(html.encode('utf-8'))
+        return
 
     # end action
     def end(self):
